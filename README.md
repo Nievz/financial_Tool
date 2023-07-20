@@ -1,6 +1,4 @@
-# Financial_Tool
-<<<<<<< HEAD
-# Unit 5 - Financial Planning
+# Financial_Tool - Financial Planning
 
 ![Financial Planner](Images/financial-planner.png)
 
@@ -10,25 +8,15 @@ You decided to start a FinTech consultancy firm, and you want to make a differen
 
 The credit union board wants to allow the union's members to assess their monthly personal finances, and also be able to forecast a reasonably good retirement plan based on cryptocurrencies, stocks, and bonds.
 
-In this homework activity, you will use all the skills you have learned until now - focusing on using APIs as part of the technical solution - to create two financial analysis tools.
-
 The first will be a personal finance planner that will allow users to visualize their savings composed by investments in shares and cryptocurrencies to assess if they have enough money as an emergency fund.
 
 The second tool will be a retirement planning tool that will use the Alpaca API to fetch historical closing prices for a retirement portfolio composed of stocks and bonds, then run Monte Carlo simulations to project the portfolio performance at 30 years. You will then use the Monte Carlo data to calculate the expected portfolio returns given a specific initial investment amount.
 
 ---
 
-### Files
-
-* [Personal Finance Planner starter code](Starter_Code/financial-planner.ipynb)
-
-* [MCForecastTools toolkit](Starter_Code/MCForecastTools.py)
-
----
-
 ### Resources
 
-This homework will utilize two APIs:
+This project utilized two APIs:
 
 * The **Alpaca Markets API** will be used to pull historical stocks and bonds information.
 
@@ -41,11 +29,9 @@ The documentation for these APIs can be found via the following links:
 * [AlpacaDOCS](https://alpaca.markets/docs/)
 ---
 
-## Instructions
-
 ### Part 1 - Personal Finance Planner
 
-In this section of the challenge, you will create a personal finance planner application. To develop the personal finance planner prototype, you should take into account the following assumptions:
+In this section of the projrct, you will create a personal finance planner application. To develop the personal finance planner prototype, you should take into account the following assumptions:
 
 * The average household income for each member of the credit union is $12,000.
 
@@ -68,8 +54,6 @@ Use the starter Jupyter notebook to complete the following steps.
 4. Compute the portfolio value of cryptocurrencies and print the results.
 
 #### Collect Investments Data Using Alpaca: `SPY` (stocks) and `AGG` (bonds)
-
-**Important:** Remember to create a `.env` file in your working directory to store the values of your Alpaca API key and Alpaca secret key.
 
 1. Create two variables named `my_agg` and `my_spy` and set them equal to `200` and `50`, respectively.
 
@@ -112,8 +96,6 @@ Follow the steps outlined in the starter notebook to complete the following:
 #### Monte Carlo Simulation
 
 1. Use the Alpaca API to fetch five years historical closing prices for a traditional `40/60` portfolio using the `SPY` and `AGG` tickers to represent the `60%` stocks (`SPY`) and `40%` bonds (`AGG`) composition of the portfolio. Make sure to convert the API output to a DataFrame and preview the output.
-
-    > *Note*: In Monte-Carlo Simulation, getting data as far back as possible matters, because if we simulate using only small amounts of data during a recent time when markets are booming, or instead falling precipitously, a Monte-Carlo Analysis will inadvertently extrapolate this temporary market movement too far into the future. Getting data over a longer time period mitigates this effect.
 
 2. Configure and execute a Monte Carlo Simulation of `500` runs and `30` years for the `40/60` portfolio.
 
